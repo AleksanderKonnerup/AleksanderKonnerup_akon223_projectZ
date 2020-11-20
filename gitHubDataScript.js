@@ -10,7 +10,7 @@
 var gitHubUrl = 'https://api.github.com/repos/google/guava/issues/events?type=IssuesEvent&page=1&per_page=100'
 var contribUrl = 'https://api.github.com/repos/google/guava/contributors?page=1';
 var userUrl = 'https://api.github.com/users/';
-var token = "";
+var token = ""; //Removed due to restrictions from GitHub, replace with a personal OAuth token
 var firstRunIssue = true;
 
 var issues =[];
@@ -90,26 +90,19 @@ function saveTextAsFile(toSave, fileName)
         return fields.map(function(fieldName){
         return JSON.stringify(row[fieldName], replacer)
     }).join(',')});
-    csv.unshift(fields.join(',')); // add header column
+    csv.unshift(fields.join(','));
     csv = csv.join('\r\n');
     var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-    //var bytes = new TextEncoder().encode(stringifiedJson);
-    //var textFileAsBlob = new Blob([bytes], {type:'application/json;charset=utf-8'});
-    //var textFileAsBlob = new Blob([stringifiedJson], {type:'application/json; charset=utf-8'});
 
     var downloadLink = document.createElement("a");
     downloadLink.download = fileName;
     downloadLink.innerHTML = "Download File";
     if (window.webkitURL != null)
     {
-        // Chrome allows the link to be clicked
-        // without actually adding it to the DOM.
         downloadLink.href = window.webkitURL.createObjectURL(blob);
     }
     else
     {
-        // Firefox requires the link to be added to the DOM
-        // before it can be clicked.
         downloadLink.href = window.URL.createObjectURL(blob);
         downloadLink.onclick = destroyClickedElement;
         downloadLink.style.display = "none";

@@ -1,16 +1,16 @@
 # AleksanderKonnerup_akon223_projectZ
-Aleksander Konnerup
-Master of Engineering studies - Software Engineering
-University of Auckland
-Research Project Z
+Aleksander Konnerup<br/>
+Master of Engineering studies - Software Engineering<br/>
+University of Auckland<br/>
+Research Project Z<br/>
 
-This repository contains
+This repository contains<br/>
 - .html file used to run the JavaScript data collection script, requires starting a local server on the machine running it, explained in detail in section 1.
 - JavaScript file, only the script used to download data in .js format
 - R studio script, used to manipulate data and apply Linear regression and VIF, explained in detail in section 2.
-- The datasets downloaded from the GitHub API, before and after manipulation in .xslx format
+- The datasets downloaded from the GitHub API, before and after manipulation in .xslx format<br/>
 
-# Section 1 - Running the data collection Script
+# Section 1 - Running the data collection Script<br/>
 To run the data collection file it will need to be opened through a local server on your machine. The following steps details how to run it:
 - Open the .html file using an IDE, i.e. visual studie code 
 - First insert your own OAuth token in the code, this is due to GitHub not allowing the public sharing of OAuth tokens and it therefore can be shared in this repository, a tutorial on how to create one can be found on: https://docs.github.com/en/free-pro-team@latest/developers/apps/building-oauth-apps
@@ -23,8 +23,8 @@ To run the data collection file it will need to be opened through a local server
 - Doubleclick on the .html file and you should be able to interact with the web page
 - Now click the buttons on the page to download the data pertaining to the chosen GitHub Api call
 
-# Section 2 - The R studio Script
-The R script can not directly be imported into R studio and run. It requires a small modification before it can be used:
+# Section 2 - The R studio Script<br/>
+The R script can not directly be imported into R studio and run. It requires a small modification before it can be used:<br/>
 - In the script where the datasets are imported, the current file-path points to my folder system and will not be applicable to other machines. Therefore, the filepath in the script needs to be changed to import the dataset files from the repository, the files should be imported in the following order, IssueDataSpringBootFormatted, ContributorDataSpringBootFormatted, IssueDataGuavaFormatted,ContributorDataGuavaFormatted. 
 - Once that is done the script should be able to run, it may require the installation of some external libraries, i.e. library(car). R's command prompt should be able to guide in how to install these if needed.
 

@@ -10,7 +10,7 @@
 var gitHubUrl = 'https://api.github.com/repos/google/guava/issues/events?type=IssuesEvent&page=1&per_page=100'
 var contribUrl = 'https://api.github.com/repos/google/guava/contributors?page=1';
 var userUrl = 'https://api.github.com/users/';
-var token = "24c61533205d0bb55bceee3d655670042f9bf14c";
+var token = "";
 var firstRunIssue = true;
 
 var issues =[];

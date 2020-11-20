@@ -8,7 +8,7 @@ This repository contains
 - .html file used to run the JavaScript data collection script, requires starting a local server on the machine running it, explained in detail in section 1.
 - JavaScript file, only the script used to download data in .js format
 - R studio script, used to manipulate data and apply Linear regression and VIF, explained in detail in section 2.
-- The datasets downloaded from the GitHub API, both in .json format and in .xcl format
+- The datasets downloaded from the GitHub API, before and after manipulation in .xslx format
 
 # Section 1 - Running the data collection Script
 To run the data collection file it will need to be opened through a local server on your machine. The following steps details how to run it:
